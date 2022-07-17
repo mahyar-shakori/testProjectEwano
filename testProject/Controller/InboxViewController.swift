@@ -251,15 +251,6 @@ extension InboxViewController: UITableViewDataSource, UITableViewDelegate {
         return nil
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//
-//        if (selectedIndex == indexPath.row){
-//            return 480
-//        } else {
-//            return 183
-//        }
-//    }
-    
     @objc func shareMessagesButtonTapped(_ sender: UIButton) {
         
         let activityVC = UIActivityViewController(activityItems: [filteredArray[sender.tag].description ?? ""], applicationActivities: nil)
@@ -297,15 +288,3 @@ extension InboxViewController: CutomCellDelegate {
         messagesTableView.endUpdates()
     }
 }
-
-//extension UIApplication {
-//
-//
-//    class var statusBarBackgroundColor: UIColor? {
-//        get {
-//            return (shared.value(forKey: "statusBar") as? UIView)?.backgroundColor
-//        } set {
-//            (shared.value(forKey: "statusBar") as? UIView)?.backgroundColor = newValue
-//        }
-//    }
-//}
