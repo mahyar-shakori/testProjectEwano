@@ -34,7 +34,10 @@ class InboxViewController: UIViewController {
         emptyView()
         messagesTableView.reloadData()
         fetchData()
+
     }
+    
+   
     
     func viewSetup(){
         
@@ -45,6 +48,15 @@ class InboxViewController: UIViewController {
         
         let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressed(sender:)))
         self.view.addGestureRecognizer(longPressRecognizer)
+        
+//        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+//        if statusBar.responds(to: #selector(setter: UIView.backgroundColor)) {
+//          statusBar.backgroundColor = UIColor.black
+//        }
+        
+        self.navigationController?.isNavigationBarHidden = true
+//        navigationController?.navigationBar.backgroundColor = UIColor.green
+
     }
     
     func activityIndicatorSetup(){
@@ -169,57 +181,58 @@ extension InboxViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = messagesTableView.dequeueReusableCell(withIdentifier: "messagesCell", for: indexPath) as? MessagesTableViewCell
+        let cell = messagesTableView.dequeueReusableCell(withIdentifier: "messagesCell", for: indexPath) as! MessagesTableViewCell
+        
         let unread = filteredArray[indexPath.row].unread
         
-        cell?.messageImage.image = nil
+        cell.messageImage.image = nil
         
         if unread == false {
-            cell?.cellView.backgroundColor = UIColor.white
+            cell.cellView.backgroundColor = UIColor.white
         } else {
-            cell?.cellView.backgroundColor = UIColor.init(red: 240/255, green: 243/255, blue: 246/255, alpha: 1.0)
+            cell.cellView.backgroundColor = UIColor.init(red: 240/255, green: 243/255, blue: 246/255, alpha: 1.0)
         }
         
         let title = filteredArray[indexPath.row].title
-        cell?.titleLabel.text = title
+        cell.titleLabel.text = title
         let description = filteredArray[indexPath.row].description
-        cell?.descriptionWithOutImageLabel.text = description
+        cell.descriptionWithOutImageLabel.text = description
         let image = filteredArray[indexPath.row].image
-        cell?.messageImage.downloaded(from: image ?? "")
+        cell.messageImage.downloaded(from: image ?? "")
         
         if image == nil {
-            cell?.descriptionWithImageLabel.isHidden = true
-            cell?.descriptionWithOutImageLabel.isHidden = false
+            cell.descriptionWithImageLabel.isHidden = true
+            cell.descriptionWithOutImageLabel.isHidden = false
             let description = filteredArray[indexPath.row].description
-            cell?.descriptionWithOutImageLabel.text = description
+            cell.descriptionWithOutImageLabel.text = description
         } else {
-            cell?.descriptionWithImageLabel.isHidden = false
-            cell?.descriptionWithOutImageLabel.isHidden = true
+            cell.descriptionWithImageLabel.isHidden = false
+            cell.descriptionWithOutImageLabel.isHidden = true
             let description = filteredArray[indexPath.row].description
-            cell?.descriptionWithImageLabel.text = description
+            cell.descriptionWithImageLabel.text = description
         }
         
-        cell?.shareMessagesButton.tag = indexPath.row
-        cell?.shareMessagesButton.addTarget(self, action: #selector(shareMessagesButtonTapped), for: .touchUpInside)
+        cell.shareMessagesButton.tag = indexPath.row
+        cell.shareMessagesButton.addTarget(self, action: #selector(shareMessagesButtonTapped), for: .touchUpInside)
         
-        cell?.saveMessagesButton.tag = indexPath.row
-        cell?.saveMessagesButton.addTarget(self, action: #selector(saveMessagesButtonTapped), for: .touchUpInside)
+        cell.saveMessagesButton.tag = indexPath.row
+        cell.saveMessagesButton.addTarget(self, action: #selector(saveMessagesButtonTapped), for: .touchUpInside)
         
-        cell?.expandMessagesButton.tag = indexPath.row
-        cell?.delegate = self
+        cell.expandMessagesButton.tag = indexPath.row
+        cell.delegate = self
         
         if (selectedIndex == indexPath.row) {
-            cell?.descriptionWithOutImageLabel.numberOfLines = 0
-            cell?.descriptionWithImageLabel.numberOfLines = 0
-            cell?.descriptionWithOutImageLabel.attributedText = cell?.descriptionWithOutImageLabel.justifyLabel(str: (cell?.descriptionWithOutImageLabel.text!)!)
-            cell?.descriptionWithImageLabel.attributedText = cell?.descriptionWithImageLabel.justifyLabel(str: (cell?.descriptionWithImageLabel.text!)!)
-            cell?.expandMessagesButton.setImage(UIImage(named: "UnExpandMessage"), for: .normal)
+            cell.descriptionWithOutImageLabel.numberOfLines = 0
+            cell.descriptionWithImageLabel.numberOfLines = 0
+            cell.descriptionWithOutImageLabel.attributedText = cell.descriptionWithOutImageLabel.justifyLabel(str: (cell.descriptionWithOutImageLabel.text!))
+            cell.descriptionWithImageLabel.attributedText = cell.descriptionWithImageLabel.justifyLabel(str: (cell.descriptionWithImageLabel.text!))
+            cell.expandMessagesButton.setImage(UIImage(named: "UnExpandMessage"), for: .normal)
         } else {
-            cell?.descriptionWithOutImageLabel.numberOfLines = 1
-            cell?.descriptionWithImageLabel.numberOfLines = 1
-            cell?.expandMessagesButton.setImage(UIImage(named: "ExpandMessage"), for: .normal)
+            cell.descriptionWithOutImageLabel.numberOfLines = 1
+            cell.descriptionWithImageLabel.numberOfLines = 1
+            cell.expandMessagesButton.setImage(UIImage(named: "ExpandMessage"), for: .normal)
         }
-        return cell!
+        return cell
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -238,14 +251,14 @@ extension InboxViewController: UITableViewDataSource, UITableViewDelegate {
         return nil
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        if (selectedIndex == indexPath.row){
-            return 370
-        } else {
-            return 183
-        }
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//
+//        if (selectedIndex == indexPath.row){
+//            return 480
+//        } else {
+//            return 183
+//        }
+//    }
     
     @objc func shareMessagesButtonTapped(_ sender: UIButton) {
         
@@ -284,3 +297,15 @@ extension InboxViewController: CutomCellDelegate {
         messagesTableView.endUpdates()
     }
 }
+
+//extension UIApplication {
+//
+//
+//    class var statusBarBackgroundColor: UIColor? {
+//        get {
+//            return (shared.value(forKey: "statusBar") as? UIView)?.backgroundColor
+//        } set {
+//            (shared.value(forKey: "statusBar") as? UIView)?.backgroundColor = newValue
+//        }
+//    }
+//}

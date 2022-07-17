@@ -48,7 +48,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGu-P2-uhD">
-                                        <rect key="frame" x="61.999999999999993" y="64.333333333333329" width="88.333333333333314" height="38"/>
+                                        <rect key="frame" x="61.999999999999993" y="64.333333333333329" width="88.333333333333314" height="38.333333333333329"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="ذخیره شده" titleAlignment="center">
@@ -86,7 +86,7 @@
                                         <rect key="frame" x="282.66666666666669" y="77.666666666666671" width="15" height="15"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۵" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aty-WE-juZ">
-                                                <rect key="frame" x="4.6666666666666288" y="-0.33333333333334281" width="5.6666666666666679" height="15.666666666666666"/>
+                                                <rect key="frame" x="5" y="-0.33333333333334281" width="5" height="15.666666666666666"/>
                                                 <fontDescription key="fontDescription" name="IRANYekanFN" family="IRANYekanFN" pointSize="9"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -163,35 +163,35 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messagesCell" id="ZN4-gw-yHE" customClass="MessagesTableViewCell" customModule="testProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="188"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="194"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZN4-gw-yHE" id="sYD-4r-NLQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="188"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="194"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CHg-LQ-wKL" userLabel="cellView">
-                                                    <rect key="frame" x="16" y="16" width="382" height="172"/>
+                                                    <rect key="frame" x="16" y="16" width="382" height="178"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۱۴۰۰/۱۰/۲۴ - ۱۰:۵۰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4z-7u-4nK">
-                                                            <rect key="frame" x="258.33333333333331" y="13" width="107.66666666666669" height="32"/>
+                                                            <rect key="frame" x="258" y="13" width="108" height="32"/>
                                                             <fontDescription key="fontDescription" name="IRANYekanFN" family="IRANYekanFN" pointSize="14"/>
                                                             <color key="textColor" red="0.50196078431372548" green="0.51372549019607838" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="اعتبار پیام" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPc-xi-3SF">
-                                                            <rect key="frame" x="304.33333333333331" y="132.33333333333334" width="61.666666666666686" height="24.333333333333343"/>
+                                                            <rect key="frame" x="304.33333333333331" y="138.33333333333334" width="61.666666666666686" height="24.333333333333343"/>
                                                             <fontDescription key="fontDescription" name="IRANYekanFN" family="IRANYekanFN" pointSize="14"/>
                                                             <color key="textColor" red="0.50196078431372548" green="0.51372549019607838" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="۱۴۰۰/۱۱/۳۰ - ۱۳:۰۰" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x93-Ev-9dq">
-                                                            <rect key="frame" x="53.999999999999993" y="132.33333333333334" width="105.33333333333331" height="24.333333333333343"/>
+                                                            <rect key="frame" x="53.999999999999993" y="138.33333333333334" width="105.33333333333331" height="24.333333333333343"/>
                                                             <fontDescription key="fontDescription" name="IRANYekanFN" family="IRANYekanFN" pointSize="14"/>
                                                             <color key="textColor" red="0.50196078431372548" green="0.51372549019607838" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8L-nc-2yV">
-                                                            <rect key="frame" x="6" y="125.66666666666666" width="48" height="38"/>
+                                                            <rect key="frame" x="6" y="131.66666666666666" width="48" height="38"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" image="ExpandMessage"/>
                                                             <connections>
@@ -214,7 +214,7 @@
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain" image="UnSavedMessages"/>
                                                         </button>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQo-xM-ZzQ">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQo-xM-ZzQ">
                                                             <rect key="frame" x="15" y="87" width="303" height="24.333333333333329"/>
                                                             <fontDescription key="fontDescription" name="IRANYekanFN" family="IRANYekanFN" pointSize="14"/>
                                                             <color key="textColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
@@ -229,7 +229,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KdB-8t-AkC" userLabel="DividerLine">
-                                                            <rect key="frame" x="56" y="119.33333333333334" width="310" height="1"/>
+                                                            <rect key="frame" x="56" y="125.33333333333334" width="310" height="1"/>
                                                             <color key="backgroundColor" red="0.81176470588235294" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="2NN-jG-5na"/>
@@ -265,6 +265,7 @@
                                                         <constraint firstItem="sPc-xi-3SF" firstAttribute="top" secondItem="KdB-8t-AkC" secondAttribute="bottom" constant="12" id="YoG-k2-fnZ"/>
                                                         <constraint firstItem="zCn-01-H3A" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CHg-LQ-wKL" secondAttribute="leading" constant="20" symbolic="YES" id="cOF-WI-DdH"/>
                                                         <constraint firstAttribute="bottom" secondItem="sPc-xi-3SF" secondAttribute="bottom" constant="15.33" id="dNs-tz-aBd"/>
+                                                        <constraint firstItem="KdB-8t-AkC" firstAttribute="top" secondItem="SQo-xM-ZzQ" secondAttribute="bottom" constant="14" id="dps-ux-uzS"/>
                                                         <constraint firstItem="WGr-pL-Ug2" firstAttribute="top" secondItem="CHg-LQ-wKL" secondAttribute="top" constant="12" id="f06-VD-JPG"/>
                                                         <constraint firstAttribute="trailing" secondItem="KdB-8t-AkC" secondAttribute="trailing" constant="16" id="fKP-eg-mB5"/>
                                                         <constraint firstAttribute="trailing" secondItem="sPc-xi-3SF" secondAttribute="trailing" constant="16" id="h8b-xK-s45"/>
@@ -275,7 +276,6 @@
                                                         <constraint firstItem="t4z-7u-4nK" firstAttribute="centerY" secondItem="rP5-7j-Wp8" secondAttribute="centerY" id="pUF-YX-jOz"/>
                                                         <constraint firstItem="zCn-01-H3A" firstAttribute="top" secondItem="t4z-7u-4nK" secondAttribute="bottom" constant="13" id="rYB-mO-F5y"/>
                                                         <constraint firstItem="x93-Ev-9dq" firstAttribute="leading" secondItem="n8L-nc-2yV" secondAttribute="trailing" id="s9g-lW-uyG"/>
-                                                        <constraint firstAttribute="height" constant="172" id="ssU-7h-xgp"/>
                                                         <constraint firstAttribute="trailing" secondItem="khu-uN-NZu" secondAttribute="trailing" constant="16" id="tGq-G4-EPy"/>
                                                         <constraint firstItem="sPc-xi-3SF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="x93-Ev-9dq" secondAttribute="trailing" constant="8" symbolic="YES" id="yyw-hT-gv8"/>
                                                     </constraints>
@@ -329,6 +329,7 @@
                             <constraint firstItem="gmn-6P-QgA" firstAttribute="top" secondItem="QJd-ab-BF1" secondAttribute="bottom" id="uJ1-2n-zyX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Iv8-Nf-ggK"/>
                     <connections>
                         <outlet property="messagesCountLabel" destination="Aty-WE-juZ" id="vDZ-gu-46e"/>
                         <outlet property="messagesCountView" destination="IoJ-GG-5er" id="0Wr-qH-tQc"/>
@@ -342,7 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17.39130434782609" y="66.84782608695653"/>
+            <point key="canvasLocation" x="1072" y="64"/>
         </scene>
     </scenes>
     <resources>
